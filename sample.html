@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="sample.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <img class="main-img-container" id="display"
+            src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+        <div class="sub-img-container">
+            <img onclick="changeImage(0)" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+            <img onclick="changeImage(1)" src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg">
+            <img onclick="changeImage(2)" src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg">
+            <img onclick="changeImage(3)"
+                src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg">
+            <img onclick="changeImage(4)" src="https://tinypng.com/images/social/website.jpg">
+        </div>
+    </div>
+    <script>
+        let imageArray = document.querySelectorAll(".sub-img-container img");
+        let num = 0;
+        function changeImage(number) {
+            document.getElementById("display").src = imageArray[number].currentSrc;
+        }
+        setInterval (function() { 
+            if (num >= 5) {
+                num = 0;
+            }
+            else {
+                document.getElementById("display").src = imageArray[num].currentSrc;
+                num++;
+            }
+        },2000);
+    </script>
 </body>
 </html>

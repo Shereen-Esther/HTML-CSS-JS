@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+* {
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    height: 60%;
+    width: 60%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-img-container {
+    height: 70%;
+    margin: 0 auto;
+}
+
+.sub-img-container {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+}
+
+.sub-img-container img {
+    height: 100%;
+}
+
+.sub-img-container img:hover {
+    cursor: pointer;
+}
